@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'open sans';
+    font-size: 16px;
+}
+
+header{
+    width: 100%; 
+    height: 650px;
+    background-image: url(img/romance4.jpg);
+    background-position: center;
+    background-size: cover;  /* Escala la imagen al mayor tamaño posible sin estirarla */
+    position: relative;
+    overflow: hidden; /* Lo que ha de suceder si el contenido se desborda */
+    color: #fff;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+
+header .encabezado{
+    margin-top: 152px;
+    animation-duration: 3s;
+    animation-name: encabezado;
+}
+
+@keyframes encabezado{
+    from{
+        margin-left: 100%;
+        width: 100%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+header .titulo{
+    font-size: 80px;
+}
+
+header .subtitulo{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+header .boton{
+    display: inline-block;
+    padding: 5px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+
+.parallaxabajo{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-width: 0 0 30vh 100vw; /* Define la ubicacion del borde */
+    border-style: solid;
+    border-color: transparent transparent #fff transparent; /* define el color del diagonal inferior*/
+}
+
+.parallaxarriba{
+    z-index: 10; /* Especifica el orden de apilamiento de un elemento */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-width: 30vh 100vw 0 0; 
+    border-style: solid;
+    border-color: #fff transparent transparent transparent; 
+}
+
+footer .parallaxarriba{
+    z-index: 10; /* Especifica el orden de apilamiento de un elemento */
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-width: 30vh 100vw 0 0; 
+    border-style: solid;
+    border-color: #fff transparent transparent transparent; 
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.sobre-nosotros{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Amatic SC', cursive;
+    margin-bottom: 10px;
+    font-weight: 600px;
+}
+
+.frase{
+    font-size: 24px;
+    font-weight: 300; /* Especifica el grosor de la letra */
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.parrafo{
+    margin-bottom: 13px;
+    line-height: 24px; /* Espacion entre lineas */
+    font-weight: 300; 
+    font-size: 15px;
+    text-align: justify;
+    color: rgb(24,16,16);
+    font-family: 'Raleway', sans-serif;
+}
+
+.parrafo-final{
+    margin-bottom: 13px;
+    line-height: 24px; /* Espacion entre lineas */
+    font-weight: 300; 
+    font-size: 15px;
+    text-align:center;
+    color: rgb(24,16,16);
+    font-family: 'Raleway', sans-serif;
+}
+
+.acerca-de .boton{
+    display: inline-block;
+    padding: 5px;
+    width: 128px;
+    font-weight: 300;
+    border: 1px solid rgba(24,16,16,.7);;
+    color: rgb(24,16,16);
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 24px;
+}
+
+.galeria{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex; /* Permite que los elementos se acomoden al tamaño de la pantalla */
+    position: relative;
+}
+
+.imagenes{
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* Permite al contenido de un elemento adaptarse a su contenedor */
+}
+
+.uno{
+    padding-top: 205px;
+}
+
+.dos{
+    padding-top: 180px;
+}
+
+.tres{
+    padding-top: 50px;
+}
+
+.cinco{
+    padding-bottom: 10px;
+}
+
+.encima{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  #FFC0CB;
+}
+
+.encima h2{
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+}
+
+.encima div{
+    position: relative;
+    display: block;
+    top: 46%;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    margin: auto;
+}
+
+.tarjetas{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Especifica si los elementos han de permanecer en una misma línea o no */
+    justify-content: space-around; /* Distribucion del espacio entre y alrededor de los flex */
+}
+
+.tarjeta{
+    margin: 20px 0;
+    width: 30%;
+    height: 275px;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    box-shadow: 0 0 4px rgba(52, 73, 94, 0.87);
+}
+
+.tarjeta p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+}
+
+.tarjeta h4{
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.tarjetas img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.tarjeta:hover h4, .tarjeta:hover p{
+    color: #3498db;
+}
+
+.tarjeta:hover{
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.87);
+}
+
+.razones{
+    height: 900px;
+    position: relative;
+    background-image: url(img/Yazeba.png);
+    overflow: hidden;
+    background-attachment: fixed; /* Determina si la imagen sera fija o se desplazara */
+    background-position: center;
+    padding-top: 130px;
+}
+
+.titulo-notas{
+    color: #fff;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 56px;
+    margin-top: 48px;
+}
+
+.subtitulo-notas{
+    color: #fff;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.razon-contenedor{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Especifica si los elementos han de permanecer en una misma línea o no */
+    justify-content: space-around; /* Distribucion del espacio entre y alrededor de los flex */
+
+}
+
+.razon{
+    width: 35%;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
+
+.razon p{
+    padding-top: 10px;
+}
+
+.razon img{
+    width: 75px;
+    height: 75px;
+}
+
+.footer{
+    background: #FFC0CB;
+}
+
+.footer h3{
+    font-family: 'Amatic SC', cursive;
+    color: #fff;
+    font-size: 20px;
+    text-align: right;
+}
+
+.contenedor-boton {
+    height: 200px;
+    position: relative;
+  }
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.myValBut{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #FFC0CB;
+}
+
+.myValBut:hover {
+    background-color: #FFC0CB;
+    color: white;
+  }
+
+@media screen and (max-width:650px){ /* factor responsivo */
+    .tarjeta{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .header .encabezado{
+        margin-top: 130px;
+    }
+
+    .header .titulo{
+        font-size: 70px;
+    }
+
+    .tarjeta{
+        width: 90%;
+    }
+
+    .none{
+        display: none;
+    }
+
+    .imagenes{
+        flex-grow: 1; /* Especifica el factor de crecimiento de un elemento flexible */
+    }
+}
